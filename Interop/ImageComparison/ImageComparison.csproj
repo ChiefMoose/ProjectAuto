@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="ScreenCapture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreenDraw.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Interop\Interop.csproj">

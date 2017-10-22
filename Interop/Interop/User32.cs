@@ -2,6 +2,7 @@
 using Interop.Structs;
 using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Runtime.InteropServices;
 
 namespace Interop
@@ -294,6 +295,15 @@ namespace Interop
         [DllImport("User32.dll")]
         private static extern int GetSystemMetrics(int nIndex);
 
+        /// <summary>
+        /// Gets the current mouse position.
+        /// </summary>
+        /// <param name="point">Point on screen.</param>
+        /// <returns>Returns true on success, false otherwise.</returns>
+        [DllImport("User32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool GetCursorPos(out Point point);
+
         #endregion
 
 
@@ -318,7 +328,7 @@ namespace Interop
             while (GetForegroundWindow() != windowHandle)
             {
             }
-        }
+        }        
 
         /// <summary>
         /// Returns the handle for the window name.
@@ -341,7 +351,7 @@ namespace Interop
         }
 
         /// <summary>
-        /// 
+        /// Converts an int to a long.
         /// </summary>
         /// <param name="low"></param>
         /// <param name="high"></param>
@@ -351,11 +361,21 @@ namespace Interop
             return (high << 16) | (low & 0xffff);
         }
 
+        /// <summary>
+        /// Gets aboslute X position based upon window width.
+        /// </summary>
+        /// <param name="x">X coord to be converted into absolute value.</param>
+        /// <returns></returns>
         public static int GetAbsoluteXValue(int x)
         {
             return (x * ushort.MaxValue) / GetSystemMetrics(SystemMetrics.X_SCREEN_SIZE);
         }
 
+        /// <summary>
+        /// Gets aboslute Y position based upon window width.
+        /// </summary>
+        /// <param name="y">y coord to be converted into absolute value.</param>
+        /// <returns></returns>
         public static int GetAbsoluteYValue(int y)
         {
             return (y * ushort.MaxValue) / GetSystemMetrics(SystemMetrics.Y_SCREEN_SIZE);

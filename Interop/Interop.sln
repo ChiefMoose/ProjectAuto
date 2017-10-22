@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageComparison", "ImageCom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SW", "SW\SW.csproj", "{741ECC57-F45A-41B0-826C-A9D7725974DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageComparisonTests", "ImageComparisonTests\ImageComparisonTests.csproj", "{3D0265E3-DD3B-4910-AD5E-5849A9FBC584}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,23 +29,12 @@ Global
 		{741ECC57-F45A-41B0-826C-A9D7725974DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{741ECC57-F45A-41B0-826C-A9D7725974DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{741ECC57-F45A-41B0-826C-A9D7725974DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D0265E3-DD3B-4910-AD5E-5849A9FBC584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D0265E3-DD3B-4910-AD5E-5849A9FBC584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D0265E3-DD3B-4910-AD5E-5849A9FBC584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D0265E3-DD3B-4910-AD5E-5849A9FBC584}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://aazhdeen.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Interop\\Interop.csproj
-		SccProjectName1 = Interop
-		SccLocalPath1 = Interop
-		SccProjectUniqueName2 = ImageComparison\\ImageComparison.csproj
-		SccProjectName2 = ImageComparison
-		SccLocalPath2 = ImageComparison
-		SccProjectUniqueName3 = SW\\SW.csproj
-		SccProjectName3 = SW
-		SccLocalPath3 = SW
 	EndGlobalSection
 EndGlobal

@@ -1,17 +1,16 @@
 ﻿using Interop;
 using Interop.Structs;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SW
 {
     public class App
     {
+        private int _xOffset = 7;
+        private int _yOffset = 47;
+
         private RECT _rectangle;
         public Rectangle Rectangle
         {
@@ -49,7 +48,7 @@ namespace SW
             User32.GetWindowRect(application.MainWindowHandle, out _rectangle);
         }
 
-        public App( string windowName)
+        public App(string windowName)
         {
             _windowHandle = User32.GetWindow(windowName);
             User32.GetWindowRect(_windowHandle, out _rectangle);
