@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Interop.Structs;
+using System;
 
 namespace Interop.Enumerations
 {

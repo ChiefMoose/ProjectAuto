@@ -1,4 +1,5 @@
-﻿
+﻿using Interop.Structs;
+
 namespace Interop.Enumerations
 {
     /// <summary>

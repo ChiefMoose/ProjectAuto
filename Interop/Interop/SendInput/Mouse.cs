@@ -44,5 +44,14 @@ namespace Interop.SendInput
                 MoveMouse(point.X, point.Y);
             }            
         }
+
+        /// <summary>
+        /// Gets the current mouse position.
+        /// </summary>
+        /// <param name="point">Point on screen.</param>
+        /// <returns>Returns true on success, false otherwise.</returns>
+        [DllImport("User32.dll", EntryPoint = "GetCursorPos")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool GetCurrentPosition(out Point point);
     }
 }

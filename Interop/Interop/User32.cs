@@ -179,7 +179,7 @@ namespace Interop
         /// <summary>
         /// Translates a virtual-key code into a scan code or character value, or translates a scan code into a virtual-key code.
         /// <para>
-        /// To specify a handle to the keyboard layout to use for translating the specified code, use the <see cref="MapVirtualKey(uint, uint)"/> function.
+        /// To specify a handle to the keyboard layout to use for translating the specified code, use the <see cref="MapVirtualKey(uint, MapKey)"/> function.
         /// </para>
         /// </summary>
         /// <param name="uCode">
@@ -216,7 +216,7 @@ namespace Interop
         /// <returns>
         /// Returns the number of events that is successfully inserted into the keyboard or mouse input stream.
         /// <para>
-        /// If the function returns 0, the input was already blocked by another thread. To get extended error information call <see cref="GetLastError"/>.
+        /// If the function returns 0, the input was already blocked by another thread. To get extended error information call GetLastError.
         /// </para>
         /// </returns>
         [DllImport("User32.dll", SetLastError = true)]
@@ -294,15 +294,6 @@ namespace Interop
 
         [DllImport("User32.dll")]
         private static extern int GetSystemMetrics(int nIndex);
-
-        /// <summary>
-        /// Gets the current mouse position.
-        /// </summary>
-        /// <param name="point">Point on screen.</param>
-        /// <returns>Returns true on success, false otherwise.</returns>
-        [DllImport("User32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        public static extern bool GetCursorPos(out Point point);
 
         #endregion
 

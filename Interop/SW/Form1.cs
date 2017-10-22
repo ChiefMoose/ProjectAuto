@@ -56,7 +56,7 @@ namespace SW
         {
             ScreenDraw.DrawToScreen();
             Point mousePos = new Point();
-            User32.GetCursorPos(out mousePos);
+            Mouse.GetCurrentPosition(out mousePos);
             label1.Text = string.Format("x:{0} y:{1}", mousePos.X, mousePos.Y);
         }
 

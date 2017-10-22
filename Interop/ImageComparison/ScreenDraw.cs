@@ -1,4 +1,4 @@
-﻿using Interop;
+﻿using Interop.SendInput;
 using System;
 using System.Drawing;
 
@@ -10,7 +10,7 @@ namespace ImageComparison
         public static void DrawToScreen()
         {
             Point pt = new Point();
-            User32.GetCursorPos(out pt); // Get the mouse cursor in screen coordinates
+            Mouse.GetCurrentPosition(out pt); // Get the mouse cursor in screen coordinates
 
             using (Graphics g = Graphics.FromHwnd(IntPtr.Zero))
             {
